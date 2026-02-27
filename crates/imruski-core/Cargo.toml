@@ -1,0 +1,16 @@
+﻿[package]
+name        = "imruski-core"
+version.workspace    = true
+edition.workspace    = true
+license.workspace    = true
+description = "Core immediate-mode GUI engine - backend agnostic"
+
+[dependencies]
+bitflags    = { workspace = true }
+ahash       = { workspace = true }
+smallvec    = { workspace = true }
+parking_lot = { workspace = true }
+log         = { workspace = true }
+thiserror   = { workspace = true }
+bytemuck    = { workspace = true }
+obfstr      = { workspace = true }

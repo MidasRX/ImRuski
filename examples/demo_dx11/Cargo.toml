@@ -1,0 +1,11 @@
+﻿[package]
+name    = "demo_dx11"
+version.workspace = true
+edition.workspace = true
+
+[target.'cfg(windows)'.dependencies]
+imruski      = { workspace = true, features = ["dx11", "memory"] }
+imruski-dx11 = { workspace = true }
+log          = { workspace = true }
+env_logger   = "0.11"
+obfstr       = { workspace = true }

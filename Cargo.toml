@@ -1,0 +1,51 @@
+﻿[workspace]
+members = [
+    "crates/imruski-core",
+    "crates/imruski-sciter",
+    "crates/imruski-ultralight",
+    "crates/imruski-dx11",
+    "crates/imruski",
+    "examples/demo_sciter",
+    "examples/demo_ultralight",
+    "examples/demo_dx11",
+    "inject/payload",
+    "inject/injector",
+]
+resolver = "2"
+
+[workspace.package]
+version      = "0.1.0"
+edition      = "2021"
+license      = "MIT OR Apache-2.0"
+authors      = ["ImRuski contributors"]
+repository   = "https://github.com/your-org/imruski"
+rust-version = "1.75"
+
+[workspace.dependencies]
+imruski-core       = { path = "crates/imruski-core" }
+imruski-sciter     = { path = "crates/imruski-sciter" }
+imruski-ultralight = { path = "crates/imruski-ultralight" }
+imruski-dx11       = { path = "crates/imruski-dx11" }
+imruski            = { path = "crates/imruski" }
+
+bitflags    = "2"
+ahash       = { version = "0.8", features = ["compile-time-rng"] }
+smallvec    = { version = "1", features = ["union"] }
+parking_lot = "0.12"
+log         = "0.4"
+thiserror   = "2"
+bytemuck    = { version = "1", features = ["derive"] }
+obfstr      = "0.4"
+
+[profile.release]
+panic     = "abort"
+opt-level = 3
+lto       = true
+codegen-units = 1
+debug     = true
+
+[profile.dev]
+panic = "abort"
+
+[patch.crates-io]
+hudhook = { path = "vendor/hudhook" }

@@ -1,0 +1,12 @@
+﻿[package]
+name        = "imruski-ultralight"
+version.workspace    = true
+edition.workspace    = true
+license.workspace    = true
+description = "ImRuski Ultralight rendering backend"
+
+[dependencies]
+imruski-core = { workspace = true }
+ul-next      = "0.4"
+log          = { workspace = true }
+thiserror    = { workspace = true }

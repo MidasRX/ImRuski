@@ -1,0 +1,12 @@
+﻿[package]
+name        = "imruski-sciter"
+version.workspace    = true
+edition.workspace    = true
+license.workspace    = true
+description = "ImRuski Sciter rendering backend"
+
+[dependencies]
+imruski-core = { workspace = true }
+sciter-rs    = "0.5"
+log          = { workspace = true }
+thiserror    = { workspace = true }

@@ -1,0 +1,3 @@
+LIBRARY imruski_payload
+EXPORTS
+    DllMain

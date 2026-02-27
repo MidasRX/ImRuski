@@ -1,0 +1,10 @@
+﻿[package]
+name    = "demo_sciter"
+version.workspace = true
+edition.workspace = true
+
+[dependencies]
+imruski        = { workspace = true, features = ["sciter"] }
+imruski-sciter = { workspace = true }
+log            = { workspace = true }
+env_logger     = "0.11"

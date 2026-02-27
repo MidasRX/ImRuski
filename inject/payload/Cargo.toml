@@ -1,0 +1,12 @@
+[package]
+name        = "imruski-payload"
+version     = "0.1.0"
+edition     = "2021"
+description = "ImRuski DX11 overlay payload DLL – inject into any DX11 game"
+
+[lib]
+crate-type = ["cdylib"]
+
+[target.'cfg(windows)'.dependencies]
+imruski-dx11 = { workspace = true }
+imruski-core = { workspace = true }

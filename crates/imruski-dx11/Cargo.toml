@@ -1,0 +1,29 @@
+﻿[package]
+name        = "imruski-dx11"
+version.workspace    = true
+edition.workspace    = true
+license.workspace    = true
+description = "ImRuski DirectX 11 overlay backend (hudhook hook)"
+
+[target.'cfg(windows)'.dependencies]
+imruski-core = { workspace = true }
+hudhook      = "0.7"
+log          = { workspace = true }
+thiserror    = { workspace = true }
+obfstr       = { workspace = true }
+
+[target.'cfg(windows)'.dependencies.windows]
+version  = "0.58"
+features = [
+    "Win32_Foundation",
+    "Win32_Graphics_Direct3D",
+    "Win32_Graphics_Direct3D11",
+    "Win32_Graphics_Direct3D12",
+    "Win32_Graphics_Dxgi",
+    "Win32_Graphics_Dxgi_Common",
+    "Win32_Graphics_Direct3D_Fxc",
+    "Win32_Security",
+    "Win32_System_LibraryLoader",
+    "Win32_System_Memory",
+    "Win32_UI_WindowsAndMessaging",
+]

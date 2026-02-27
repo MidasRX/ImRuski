@@ -1,0 +1,26 @@
+﻿[package]
+name        = "imruski"
+version.workspace    = true
+edition.workspace    = true
+license.workspace    = true
+description = "Immediate-mode GUI for Rust - multi-backend (Sciter, Ultralight, DX11)"
+keywords    = ["imgui", "gui", "immediate-mode", "overlay", "game"]
+categories  = ["gui", "rendering"]
+
+[features]
+default    = []
+sciter     = ["dep:imruski-sciter"]
+ultralight = ["dep:imruski-ultralight"]
+dx11       = ["dep:imruski-dx11"]
+memory     = ["dep:toy-arms"]
+full       = ["sciter", "ultralight", "dx11", "memory"]
+
+[dependencies]
+imruski-core       = { workspace = true }
+imruski-sciter     = { workspace = true, optional = true }
+imruski-ultralight = { workspace = true, optional = true }
+imruski-dx11       = { workspace = true, optional = true }
+obfstr             = { workspace = true }
+
+[target.'cfg(windows)'.dependencies]
+toy-arms = { version = "0.9", optional = true }
